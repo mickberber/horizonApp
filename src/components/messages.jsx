@@ -30,10 +30,10 @@ class Messages extends Component {
   render() {
 
     var html = this.state.convo.map(function(message) {
-          return <Message text={message.text} />
+          return <Message author={message.author} text={message.text} />
         });
 
-    return (<div>{html}</div>);
+    return (<div className='center'>{html}</div>);
   }
 }
 
