@@ -33,7 +33,7 @@ class Messages extends Component {
           return <Message author={message.author} text={message.text} />
         });
 
-    return (<div className='center'>{html}</div>);
+    return (<div>{html}</div>);
   }
 }
 
