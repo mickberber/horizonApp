@@ -7,6 +7,26 @@
   </head>
   <body>
    <div class='attach'></div>
+   <button/>
   </body>
   <script src='./bundle.js'></script>
+  <script>
+  var horizon = Horizon();
+      horizon.onReady(function() {
+        document.querySelector('h1').innerHTML = 'App works!'
+      });
+  horizon.connect();
+  const chat = horizon("messages");
+  $(document).on('ready', function() {
+    $('button').on('click', function() {
+      let message = {
+        text: "What a beautiful horizon!",
+        datetime: new Date(),
+        author: "@dalanmiller"
+      }
+
+      chat.store(message);
+    })
+  })
+  </script>
 </html>

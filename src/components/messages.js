@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Message from './message';
 
 class Messages extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class Messages extends Component {
   render() {
 
     var html = this.state.convo.map(function(message) {
-          return <li>{message.author}</li>
+          return <Message text={message.text} />
         });
 
     return (<div>{html}</div>);
